@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit{
     }
 
     launchSearchComponent(){
-        console.log(this.searchFilm, 1);
+       // console.log(this.searchFilm, 1);
         this.router.navigate(['/search']);
         const self = this;
         setTimeout(function() {

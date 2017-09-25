@@ -7,7 +7,8 @@
                     <div class="card card-profile">
                         <div class="card-avatar card-avatar-manual">
                             <a routerLink="/film/{{film.id}}" class="img-wrap">
-                                <img class="img" src="https://image.tmdb.org/t/p/w500/{{film.poster_path}}"/>
+                                <img class="img"
+                                 [src]="film.poster_path ? 'https://image.tmdb.org/t/p/w500/' + film.poster_path : '../assets/img/no-image.jpg'"/>
                             </a>
                         </div>
                         <div class="content">

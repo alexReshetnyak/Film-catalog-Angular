@@ -27,7 +27,7 @@ var NavbarComponent = (function () {
         } });
     };
     NavbarComponent.prototype.launchSearchComponent = function () {
-        console.log(this.searchFilm, 1);
+        // console.log(this.searchFilm, 1);
         this.router.navigate(['/search']);
         var self = this;
         setTimeout(function () {

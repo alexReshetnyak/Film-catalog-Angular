@@ -36,24 +36,20 @@ export class SearchComponent implements OnInit{
         this.searchObservable = this.searchService.getText()
             .debounceTime(250)
             .subscribe( text => {
-                console.log(text, 3);
                 this.searchText = text+"";
-                this.startNewSearchFilms();
+                this.getSearchFilms('new');
             }
         );
     }
 
-    startNewSearchFilms(){
-        this.searchPageList = 1;
-        this.getSearchFilms();
-    }
-
-    getSearchFilms(){
+    getSearchFilms(typeSearch){
+        if (typeSearch === 'new'){
+            this.searchPageList = 1;
+        }
         this.hideLoader= false;
         this.filmList = [];
         this.filmCardService.getSearchFilms(this.searchText, this.searchPageList).subscribe(data => {
             this.hideLoader= true;
-            console.log(data, 'getSearch');
             this.pagesInThisSearch = +data.total_pages;
             if (this.pagesInThisSearch > 1 && this.pagesInThisSearch > this.searchPageList) {
                 this.showMoreButton = true;
@@ -67,7 +63,7 @@ export class SearchComponent implements OnInit{
     getMoreFilms(){
         if (this.pagesInThisSearch >= this.searchPageList) {
             this.searchPageList++;
-            this.getSearchFilms();
+            this.getSearchFilms('more');
         }
     }
 

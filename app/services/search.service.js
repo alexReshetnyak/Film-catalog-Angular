@@ -15,11 +15,9 @@ var SearchService = (function () {
         this.subject = new Subject_1.Subject();
     }
     SearchService.prototype.sendText = function (text) {
-        console.log(text, 2);
         this.subject.next(text);
     };
     SearchService.prototype.getText = function () {
-        console.log(2.5);
         return this.subject.asObservable();
     };
     SearchService = __decorate([

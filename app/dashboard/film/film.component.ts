@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import {FilmService} from '../../services/film.service';
 import { Film } from '../../shared/models/film-model'; 
@@ -16,12 +16,17 @@ export class FilmComponent{
     filmItem: Film = new Film;
     filmYear: string;
     filmAddedStatus: boolean = false;
+    pixel;
+    @ViewChild('wrap')
+    wrapDiv: ElementRef;
 
     constructor(
                 private route: ActivatedRoute,
                 private router: Router,
                 private filmCardService: FilmService
-                ){ window.scrollTo(0, 0);}
+                ){
+                    window.scrollTo(0, 0);
+                }
 
     ngOnInit() {
         this.id = this.route.snapshot.params['id'];
@@ -35,8 +40,14 @@ export class FilmComponent{
 
     }
 
+    getUp(){
+        console.log(this.pixel, window.pageYOffset, document.documentElement.scrollTop);
+        window.scrollTo(+this.pixel, +this.pixel);
+    }
+
     getAllFilmsFromMdb(){
         this.filmCardService.getFilmsFromMdb().subscribe(data => {
+            window.scrollTo(0, 0);
             if (data && data.length && data.length >= 1) {
                 data.forEach(film => {
                     if (film.filmId && this.id === film.filmId) {
@@ -57,14 +68,12 @@ export class FilmComponent{
 
     deleteFilm(){
         this.filmCardService.deleteFilm(this.id).subscribe(data => {
-            console.log(data, 'deleted');
             this.filmAddedStatus = false;
         });
     }
 
     saveFilm(){
         this.filmCardService.saveFilm(this.id).subscribe(data => {
-            console.log(data, "saved");
             this.filmAddedStatus = true;
         });
     }

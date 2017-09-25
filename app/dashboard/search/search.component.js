@@ -29,22 +29,19 @@ var SearchComponent = (function () {
         this.searchObservable = this.searchService.getText()
             .debounceTime(250)
             .subscribe(function (text) {
-            console.log(text, 3);
             _this.searchText = text + "";
-            _this.startNewSearchFilms();
+            _this.getSearchFilms('new');
         });
     };
-    SearchComponent.prototype.startNewSearchFilms = function () {
-        this.searchPageList = 1;
-        this.getSearchFilms();
-    };
-    SearchComponent.prototype.getSearchFilms = function () {
+    SearchComponent.prototype.getSearchFilms = function (typeSearch) {
         var _this = this;
+        if (typeSearch === 'new') {
+            this.searchPageList = 1;
+        }
         this.hideLoader = false;
         this.filmList = [];
         this.filmCardService.getSearchFilms(this.searchText, this.searchPageList).subscribe(function (data) {
             _this.hideLoader = true;
-            console.log(data, 'getSearch');
             _this.pagesInThisSearch = +data.total_pages;
             if (_this.pagesInThisSearch > 1 && _this.pagesInThisSearch > _this.searchPageList) {
                 _this.showMoreButton = true;
@@ -58,7 +55,7 @@ var SearchComponent = (function () {
     SearchComponent.prototype.getMoreFilms = function () {
         if (this.pagesInThisSearch >= this.searchPageList) {
             this.searchPageList++;
-            this.getSearchFilms();
+            this.getSearchFilms('more');
         }
     };
     SearchComponent.prototype.ngOnDestroy = function () {

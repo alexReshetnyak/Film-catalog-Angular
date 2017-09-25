@@ -33,9 +33,14 @@ var FilmComponent = (function () {
             _this.getAllFilmsFromMdb();
         });
     };
+    FilmComponent.prototype.getUp = function () {
+        console.log(this.pixel, window.pageYOffset, document.documentElement.scrollTop);
+        window.scrollTo(+this.pixel, +this.pixel);
+    };
     FilmComponent.prototype.getAllFilmsFromMdb = function () {
         var _this = this;
         this.filmCardService.getFilmsFromMdb().subscribe(function (data) {
+            window.scrollTo(0, 0);
             if (data && data.length && data.length >= 1) {
                 data.forEach(function (film) {
                     if (film.filmId && _this.id === film.filmId) {
@@ -56,17 +61,19 @@ var FilmComponent = (function () {
     FilmComponent.prototype.deleteFilm = function () {
         var _this = this;
         this.filmCardService.deleteFilm(this.id).subscribe(function (data) {
-            console.log(data, 'deleted');
             _this.filmAddedStatus = false;
         });
     };
     FilmComponent.prototype.saveFilm = function () {
         var _this = this;
         this.filmCardService.saveFilm(this.id).subscribe(function (data) {
-            console.log(data, "saved");
             _this.filmAddedStatus = true;
         });
     };
+    __decorate([
+        core_1.ViewChild('wrap'), 
+        __metadata('design:type', core_1.ElementRef)
+    ], FilmComponent.prototype, "wrapDiv", void 0);
     FilmComponent = __decorate([
         core_1.Component({
             selector: 'film-cmp',

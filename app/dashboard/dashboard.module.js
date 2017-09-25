@@ -13,6 +13,7 @@ var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
 var dashboard_routes_1 = require('./dashboard.routes');
 var films_resolve_service_1 = require('../shared/guards/films-resolve-service');
+var forms_1 = require('@angular/forms');
 var DashboardModule = (function () {
     function DashboardModule() {
     }
@@ -20,7 +21,8 @@ var DashboardModule = (function () {
         core_1.NgModule({
             imports: [
                 router_1.RouterModule.forChild(dashboard_routes_1.MODULE_ROUTES),
-                common_1.CommonModule
+                common_1.CommonModule,
+                forms_1.FormsModule,
             ],
             declarations: [dashboard_routes_1.MODULE_COMPONENTS],
             providers: [films_resolve_service_1.FilmResolver],
