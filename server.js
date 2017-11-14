@@ -8,9 +8,7 @@ var express         = require('express'),
     app             = express();
 
 //middlewares
-//app.use(express.static(path.join(__dirname, "dist")));
-app.use(express.static(__dirname));
-
+app.use(express.static(path.join(__dirname, "dist")));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({type: 'application/json'}));
 app.use(logger('dev'));
@@ -23,6 +21,7 @@ app.use(function(req, res, next){
     res.send({ error: 'Not found' });
     return;
 });
+
 app.use(function(err, req, res, next){
     res.status(err.status || 500);
     console.log('Internal error(%d): %s',res.statusCode,err.message);
@@ -30,11 +29,9 @@ app.use(function(err, req, res, next){
     return;
 });
 
-app.get('*', (req, res) => {
-    //res.sendFile(path.join(__dirname, 'dist/index.html'));
-    res.sendFile(__dirname + '/index.html');
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
-
 
 // connect to db
 mongoose.connect(appConfig.database);

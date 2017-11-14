@@ -37,7 +37,7 @@
             var item = new FavoriteFilmModel(req.body);
 
             FavoriteFilmModel.find(
-                {filmId: req.body.filmId}
+                {filmId: req.params.id}
             ).remove(
                 function(err){
                     if (!err) {
