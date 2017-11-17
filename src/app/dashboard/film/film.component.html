@@ -16,7 +16,7 @@
                         </h1>
                         <div></div>
                         <div class="users-rating">
-                            <app-rating [rating] = 'filmItem.vote_average' ></app-rating>
+                            <app-rating [rating] = 'filmItem.vote_average'></app-rating>
                             <div class="film-star-wrap" (click) = 'changeFilmStatus()'>
                                 <div class="film-star" [ngClass]="{'film-star-added': filmAddedStatus}"></div>
                             </div>

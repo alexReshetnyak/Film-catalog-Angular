@@ -12,9 +12,9 @@ import { SearchService } from '../../services/search.service';
 })
 
 export class NavbarComponent implements OnInit {
-    private listTitles: any[];
+    public listTitles: any[];
     public menuItems: any[];
-    private searchFilm: string = '';
+    public searchFilm: string = '';
     public location: Location;
 
     constructor(location:Location, private searchService: SearchService, private router: Router) {
