@@ -15,19 +15,19 @@ app.use(logger('dev'));
 app.use('/', router);
 
 //middlewares: error handling
-app.use(function(req, res, next){
-    res.status(404);
-    console.log('Not found URL: %s',req.url);
-    res.send({ error: 'Not found' });
-    return;
-});
+// app.use(function(req, res, next){
+//     res.status(404);
+//     console.log('Not found URL: %s',req.url);
+//     res.send({ error: 'Not found' });
+//     return;
+// });
 
-app.use(function(err, req, res, next){
-    res.status(err.status || 500);
-    console.log('Internal error(%d): %s',res.statusCode,err.message);
-    res.send({ error: err.message });
-    return;
-});
+// app.use(function(err, req, res, next){
+//     res.status(err.status || 500);
+//     console.log('Internal error(%d): %s',res.statusCode,err.message);
+//     res.send({ error: err.message });
+//     return;
+// });
 
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
@@ -43,6 +43,4 @@ mongoose.connection.once('open', function() {
 });
 
 // start server
-app.listen(appConfig.port, function(){
-    console.log('Express server listening on port 4200');
-});
+app.listen(process.env.PORT || 8080);
