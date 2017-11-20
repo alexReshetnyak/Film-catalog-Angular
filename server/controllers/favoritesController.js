@@ -1,4 +1,4 @@
-    var FavoriteFilmModel  = require("../../server/models/FavoriteItem");
+    var FavoriteFilmModel  = require("../../server/models/favoriteItem");
 
     function handleError(res, error) {
         res.statusCode = 500;
