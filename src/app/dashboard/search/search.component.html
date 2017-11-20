@@ -1,6 +1,9 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
+            <div *ngIf = 'noResults' class="text-center">
+                <h3>Простите, по Вашему запросу нет результатов</h3>
+            </div>
             <div class="col-md-12 col-lg-10 wrap-for-films" *ngFor="let film of filmList; let i = index">
                 
                 <div class="col-md-6">

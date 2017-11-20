@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ROUTES } from './navbar-routes.config';
 import { Router } from '@angular/router';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
-import { SearchService } from '../../services/search.service';
 
 @Component({
     moduleId: module.id,
@@ -17,7 +16,7 @@ export class NavbarComponent implements OnInit {
     public searchFilm: string = '';
     public location: Location;
 
-    constructor(location:Location, private searchService: SearchService, private router: Router) {
+    constructor(location: Location, private router: Router) {
         this.location = location;
     }
     public ngOnInit(): any {
@@ -29,11 +28,8 @@ export class NavbarComponent implements OnInit {
         });
     }
 
-    public launchSearchComponent(): void {
-        this.searchService.setText(this.searchFilm);
+    public launchSearchComponent(searchFilm): void {
+        this.router.navigate(['/search/' + searchFilm]);
         this.searchFilm = '';
-        if (this.router.url !== '/search') {
-            this.router.navigate(['/search']);
-        }
     }
 }

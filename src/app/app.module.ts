@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { FilmService } from './services/film.service';
-import { SearchService } from './services/search.service';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { FooterModule } from './shared/footer/footer.module';
@@ -29,7 +28,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     declarations: [ AppComponent, DashboardComponent ],
     providers: [{   provide: LocationStrategy,
                     useClass: HashLocationStrategy},
-                    FilmService, SearchService],
+                    FilmService],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

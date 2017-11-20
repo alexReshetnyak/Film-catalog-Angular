@@ -1,8 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { FilmService } from '../../services/film.service';
-import { SearchService } from '../../services/search.service';
-import {Subscription} from 'rxjs/Subscription';
-import 'rxjs/add/operator/debounceTime';
 
 declare let $: any;
 
@@ -15,49 +13,55 @@ declare let $: any;
 
 export class SearchComponent implements OnInit, OnDestroy {
 
-    filmList : Object[]= [];
-    filmCategory : string;
-    searchPageList: number = 1;
-    hideLoader: boolean;
-    showMoreButton: boolean = false;
-    searchText: string = '';
-    searchObservable: Subscription;
-    pagesInThisSearch: number;
-    dataFilmsShort: string[];
+    public filmList: Object[] = [];
+    public filmCategory: string;
+    public searchPageList: number = 1;
+    public hideLoader: boolean;
+    public showMoreButton: boolean = false;
+    public searchText: string;
+    public pagesInThisSearch: number;
+    public dataFilmsShort: string[];
+    public sub: any;
+    public noResults: boolean = false;
 
     constructor(private filmCardService: FilmService,
-                private searchService: SearchService) {
+                private route: ActivatedRoute) {
                     window.scrollTo(0, 0);
                 }
 
-    public ngOnInit():void {
+    public ngOnInit(): void {
         this.filmCategory = 'popularity';
         this.hideLoader = true;
-
-        this.searchObservable = this.searchService.getText()
-            .debounceTime(250)
-            .subscribe( text => {
-                this.searchText = text + '';
+        this.sub = this.route.params.subscribe(params => {
+            this.searchText = params['film'];
+            if (this.searchText) {
                 this.getSearchFilms('new');
             }
-        );
+        });
     }
 
     public getSearchFilms(typeSearch): void {
-        if (typeSearch === 'new'){
+        this.hideLoader = false;
+        this.filmList = [];
+        this.noResults = false;
+        if (typeSearch === 'new') {
             this.searchPageList = 1;
         }
-        this.hideLoader= false;
-        this.filmList = [];
-        this.filmCardService.getSearchFilms(this.searchText, this.searchPageList).subscribe(data => {
-            this.hideLoader= true;
+
+        this.filmCardService.getSearchFilms(this.searchText, this.searchPageList)
+        .subscribe(data => {
+            this.hideLoader = true;
             this.pagesInThisSearch = +data.total_pages;
             if (this.pagesInThisSearch > 1 && this.pagesInThisSearch > this.searchPageList) {
                 this.showMoreButton = true;
             }else{
                 this.showMoreButton = false;
             }
-            this.filmList = [...this.filmList, ...data.results];
+            if (data.results.length > 0) {
+                this.filmList = [...this.filmList, ...data.results];
+            } else {
+                this.noResults = true;
+            }
         });
     }
 
@@ -69,8 +73,6 @@ export class SearchComponent implements OnInit, OnDestroy {
     }
 
     public ngOnDestroy(): void {
-        if (this.searchObservable) {
-            this.searchObservable.unsubscribe();
-        }
+        this.sub.unsubscribe();
     }
 }

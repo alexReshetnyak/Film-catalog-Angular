@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { FilmService } from '../../services/film.service';
 import { Film } from '../../shared/models/film-model';
 
@@ -20,7 +20,6 @@ export class FilmComponent implements OnInit {
 
     constructor(
                 private route: ActivatedRoute,
-                private router: Router,
                 private filmCardService: FilmService
                 ) {
                     window.scrollTo(0, 0);

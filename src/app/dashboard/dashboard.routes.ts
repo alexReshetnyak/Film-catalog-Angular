@@ -13,8 +13,13 @@ export const MODULE_ROUTES: Route[] = [
         component: HomeComponent
     },
     {
-        path: 'search',
+        path: 'search/:film',
         component: SearchComponent
+    },
+    {
+        path: 'search',
+        redirectTo: 'home',
+        pathMatch: 'full'
     },
     {
         path: 'userfilms',
