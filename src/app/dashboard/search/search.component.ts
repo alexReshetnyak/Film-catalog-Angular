@@ -50,6 +50,7 @@ export class SearchComponent implements OnInit, OnDestroy {
 
         this.filmCardService.getSearchFilms(this.searchText, this.searchPageList)
         .subscribe(data => {
+
             this.hideLoader = true;
             this.pagesInThisSearch = +data.total_pages;
             if (this.pagesInThisSearch > 1 && this.pagesInThisSearch > this.searchPageList) {
@@ -57,8 +58,8 @@ export class SearchComponent implements OnInit, OnDestroy {
             } else {
                 this.showMoreButton = false;
             }
-            if (data.results.length > 0) {
-                this.filmList = [...this.filmList, ...data.results];
+            if (data && data.length) {
+                this.filmList = [...this.filmList, ...data];
             } else {
                 this.noResults = true;
             }

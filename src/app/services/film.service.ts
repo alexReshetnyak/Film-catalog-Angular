@@ -30,7 +30,7 @@ export class FilmService {
     }
 
     private extractActorsData(res: any): object {
-        console.log(res, 'response ');
+        // console.log(res, 'response ');
         const body = res;
         return body.cast || {};
     }
@@ -56,7 +56,7 @@ export class FilmService {
     public getFilmById(filmId: string): Observable<any> {
         return this.http.get(this.filmUrlFirstPart + filmId + this.filmUrlSecondPart)
         .pipe(
-            map(this.extractListData),
+            map(this.extracData),
             catchError(this.handleError)
         );
     }
@@ -74,7 +74,7 @@ export class FilmService {
     public getFilmsFromMdb(): Observable<any> {
         return this.http.get('./api/films')
         .pipe(
-            map(this.extractListData),
+            map(this.extracData),
             catchError(this.handleError)
         );
     }
