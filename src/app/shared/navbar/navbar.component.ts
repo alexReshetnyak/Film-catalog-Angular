@@ -5,7 +5,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 
 @Component({
     moduleId: module.id,
-    selector: 'ng-navbar',
+    selector: 'app-navbar',
     templateUrl: 'navbar.component.html',
     styleUrls: ['navbar.component.css'],
 })
@@ -13,7 +13,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 export class NavbarComponent implements OnInit {
     public listTitles: any[];
     public menuItems: any[];
-    public searchFilm: string = '';
+    public searchFilm = '';
     public location: Location;
 
     constructor(location: Location, private router: Router) {
@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
     public ngOnInit(): any {
         this.listTitles = ROUTES.filter(listTitle => listTitle);
         this.menuItems = ROUTES.filter(menuItem => {
-            if (menuItem.path != 'table') {
+            if (menuItem.path !== 'table') {
                 return menuItem;
             }
         });

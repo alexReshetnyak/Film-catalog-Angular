@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FilmService } from '../../services/film.service';
 
 @Component({
-    selector: 'ng-favorites',
+    selector: 'app-favorites',
     moduleId: module.id,
     templateUrl: 'favorites.component.html',
     styleUrls: ['favorites.component.css'],

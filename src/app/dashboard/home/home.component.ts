@@ -4,7 +4,7 @@ import {FilmService} from '../../services/film.service';
 declare let $: any;
 
 @Component({
-    selector: 'ng-home',
+    selector: 'app-home',
     moduleId: module.id,
     templateUrl: 'home.component.html',
     styleUrls: ['home.component.css'],
@@ -31,9 +31,9 @@ export class HomeComponent implements OnInit {
     }
 
     public getFilms(): void {
-        this.hideLoader= false;
-        if(!this.filmCategory) {return;}
-        if(this.pageList === 1) { this.filmList = []; }
+        this.hideLoader = false;
+        if (!this.filmCategory) { return; }
+        if (this.pageList === 1) { this.filmList = []; }
         this.filmCardService.getFilms(this.filmCategory, this.pageList).subscribe(films => {
             this.hideLoader = true;
             if (films.length > 0) {

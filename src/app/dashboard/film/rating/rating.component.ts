@@ -4,7 +4,7 @@ import {FilmService} from '../../../services/film.service';
 
 
 @Component({
-    selector: 'ng-rating',
+    selector: 'app-rating',
     moduleId: module.id,
     templateUrl: 'rating.component.html',
     styleUrls: ['rating.component.css'],
@@ -14,9 +14,9 @@ export class RatingComponent implements OnChanges {
 
     public id: string;
     @Input() public rating: any;
-    public leftProgressDeg: number = 0;
-    public rightProgressDeg: number = 0;
-    public colorProgress: string = '';
+    public leftProgressDeg = 0;
+    public rightProgressDeg = 0;
+    public colorProgress = '';
 
     public ngOnChanges(changes: SimpleChanges): void {
         for (const key in changes) {
@@ -39,9 +39,9 @@ export class RatingComponent implements OnChanges {
 
         if (rating > 70) {
             this.colorProgress = '#21D07A';
-        }else if(rating > 60){
+        } else if (rating > 60) {
             this.colorProgress = '#D2D531';
-        }else{
+        } else {
             this.colorProgress = '#ff3300';
         }
         this.startLoader(self, rating);
@@ -57,7 +57,7 @@ export class RatingComponent implements OnChanges {
                 } else {
                     if (self.rightProgressDeg >= 169) {
                         self.rightProgressDeg = 180;
-                    }else{
+                    } else {
                         self.rightProgressDeg = self.rightProgressDeg + 10.8;
                     }
                     rating = rating - 3;

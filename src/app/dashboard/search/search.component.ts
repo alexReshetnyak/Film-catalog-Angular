@@ -5,7 +5,7 @@ import { FilmService } from '../../services/film.service';
 declare let $: any;
 
 @Component({
-    selector: 'ng-search',
+    selector: 'app-search',
     moduleId: module.id,
     templateUrl: 'search.component.html',
     styleUrls: ['search.component.css'],
@@ -15,14 +15,14 @@ export class SearchComponent implements OnInit, OnDestroy {
 
     public filmList: Object[] = [];
     public filmCategory: string;
-    public searchPageList: number = 1;
+    public searchPageList = 1;
     public hideLoader: boolean;
-    public showMoreButton: boolean = false;
+    public showMoreButton = false;
     public searchText: string;
     public pagesInThisSearch: number;
     public dataFilmsShort: string[];
     public sub: any;
-    public noResults: boolean = false;
+    public noResults = false;
 
     constructor(private filmCardService: FilmService,
                 private route: ActivatedRoute) {
@@ -54,7 +54,7 @@ export class SearchComponent implements OnInit, OnDestroy {
             this.pagesInThisSearch = +data.total_pages;
             if (this.pagesInThisSearch > 1 && this.pagesInThisSearch > this.searchPageList) {
                 this.showMoreButton = true;
-            }else{
+            } else {
                 this.showMoreButton = false;
             }
             if (data.results.length > 0) {

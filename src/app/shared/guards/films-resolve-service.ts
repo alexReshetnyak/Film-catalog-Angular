@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router, Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Film } from '..//models/film-model';
 import { FilmService } from '../../services/film.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class FilmResolver implements Resolve<Film> {

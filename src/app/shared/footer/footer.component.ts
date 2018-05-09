@@ -2,7 +2,7 @@ import { Component, HostBinding } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'ng-footer',
+    selector: 'app-footer',
     templateUrl: 'footer.component.html'
 })
 

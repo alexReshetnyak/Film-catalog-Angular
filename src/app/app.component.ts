@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 declare let $: any;
 
 @Component({
-    selector: 'ng-root',
+    selector: 'app-root',
     moduleId: module.id,
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.css'],
