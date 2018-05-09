@@ -1,6 +1,6 @@
 webpackJsonp(["main"],{
 
-/***/ "../../../../../src/$$_gendir lazy recursive":
+/***/ "../../../../../src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,7 +13,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
+webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\">\n  <app-navbar></app-navbar>\n   <div class=\"main-panel\">\n       <app-dashboard></app-dashboard>\n       <app-footer></app-footer>\n   </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\">\n  <ng-navbar></ng-navbar>\n   <div class=\"main-panel\">\n       <ng-dashboard></ng-dashboard>\n       <ng-footer></ng-footer>\n   </div>\n</div>\n"
 
 /***/ }),
 
@@ -47,8 +47,8 @@ module.exports = "<div class=\"wrapper\">\n  <app-navbar></app-navbar>\n   <div 
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,19 +68,19 @@ var AppComponent = (function () {
         $.getScript('../assets/js/material-dashboard.js');
         $.getScript('../assets/js/initMenu.js');
     };
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-root',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/app.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/app.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]) === "function" && _a || Object])
-], AppComponent);
 
-var _a;
-//# sourceMappingURL=app.component.js.map
+
 
 /***/ }),
 
@@ -89,11 +89,11 @@ var _a;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
@@ -121,28 +121,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_module__["a" /* DashboardModule */],
+                __WEBPACK_IMPORTED_MODULE_10__shared_navbar_navbar_module__["a" /* NavbarModule */],
+                __WEBPACK_IMPORTED_MODULE_9__shared_footer_footer_module__["a" /* FooterModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot([])
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_component__["a" /* DashboardComponent */]],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */],
+                    useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] },
+                __WEBPACK_IMPORTED_MODULE_7__services_film_service__["a" /* FilmService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_module__["a" /* DashboardModule */],
-            __WEBPACK_IMPORTED_MODULE_10__shared_navbar_navbar_module__["a" /* NavbarModule */],
-            __WEBPACK_IMPORTED_MODULE_9__shared_footer_footer_module__["a" /* FooterModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_common__["b" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot([])
-        ],
-        declarations: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_component__["a" /* DashboardComponent */]],
-        providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */],
-                useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] },
-            __WEBPACK_IMPORTED_MODULE_7__services_film_service__["a" /* FilmService */]],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
-    })
-], AppModule);
 
-//# sourceMappingURL=app.module.js.map
+
 
 /***/ }),
 
@@ -158,7 +158,7 @@ module.exports = "<router-outlet></router-outlet>\r\n"
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -169,16 +169,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var DashboardComponent = (function () {
     function DashboardComponent() {
     }
+    DashboardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-dashboard',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
+        })
+    ], DashboardComponent);
     return DashboardComponent;
 }());
-DashboardComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-dashboard',
-        template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
-    })
-], DashboardComponent);
 
-//# sourceMappingURL=dashboard.component.js.map
+
 
 /***/ }),
 
@@ -187,12 +188,12 @@ DashboardComponent = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_routes__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.routes.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_guards_films_resolve_service__ = __webpack_require__("../../../../../src/app/shared/guards/films-resolve-service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -208,21 +209,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var DashboardModule = (function () {
     function DashboardModule() {
     }
+    DashboardModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__dashboard_routes__["b" /* MODULE_ROUTES */]),
+                __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__dashboard_routes__["a" /* MODULE_COMPONENTS */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_4__shared_guards_films_resolve_service__["a" /* FilmResolver */]],
+        })
+    ], DashboardModule);
     return DashboardModule;
 }());
-DashboardModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__dashboard_routes__["b" /* MODULE_ROUTES */]),
-            __WEBPACK_IMPORTED_MODULE_2__angular_common__["b" /* CommonModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
-        ],
-        declarations: [__WEBPACK_IMPORTED_MODULE_3__dashboard_routes__["a" /* MODULE_COMPONENTS */]],
-        providers: [__WEBPACK_IMPORTED_MODULE_4__shared_guards_films_resolve_service__["a" /* FilmResolver */]],
-    })
-], DashboardModule);
 
-//# sourceMappingURL=dashboard.module.js.map
+
 
 /***/ }),
 
@@ -285,7 +286,7 @@ var MODULE_COMPONENTS = [
     __WEBPACK_IMPORTED_MODULE_5__film_rating_rating_component__["a" /* RatingComponent */],
     __WEBPACK_IMPORTED_MODULE_3__search_search_component__["a" /* SearchComponent */],
 ];
-//# sourceMappingURL=dashboard.routes.js.map
+
 
 /***/ }),
 
@@ -319,7 +320,7 @@ module.exports = "<div class=\"main-content\">\r\n    <div class=\"container-flu
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FavoritesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -354,19 +355,19 @@ var FavoritesComponent = (function () {
             }
         });
     };
+    FavoritesComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-favorites',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/favorites/favorites.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/favorites/favorites.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */]])
+    ], FavoritesComponent);
     return FavoritesComponent;
 }());
-FavoritesComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-favorites',
-        template: __webpack_require__("../../../../../src/app/dashboard/favorites/favorites.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/dashboard/favorites/favorites.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */]) === "function" && _a || Object])
-], FavoritesComponent);
 
-var _a;
-//# sourceMappingURL=favorites.component.js.map
+
 
 /***/ }),
 
@@ -400,7 +401,7 @@ module.exports = "<div class=\"actors-wrap\">\r\n  <div class=\"actor-wrap col-m
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActorsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -429,23 +430,23 @@ var ActorsComponent = (function () {
             }
         });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], ActorsComponent.prototype, "id", void 0);
+    ActorsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-actors',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/film/actors/actors.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/film/actors/actors.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */]])
+    ], ActorsComponent);
     return ActorsComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", String)
-], ActorsComponent.prototype, "id", void 0);
-ActorsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-actors',
-        template: __webpack_require__("../../../../../src/app/dashboard/film/actors/actors.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/dashboard/film/actors/actors.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */]) === "function" && _a || Object])
-], ActorsComponent);
 
-var _a;
-//# sourceMappingURL=actors.component.js.map
+
 
 /***/ }),
 
@@ -457,7 +458,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".film-background{\r\n    min-height: 650px;\r\n    background-size: cover;\r\n    padding: 0;\r\n    margin-bottom: 40px;\r\n}\r\n\r\n.wrap-blue{\r\n    background: rgba(0, 13, 0, 0.8);\r\n    min-height: 650px;\r\n    width: 100%;\r\n    text-align: center;\r\n}\r\n\r\n.spacer{\r\n    height: 70px;\r\n}\r\n\r\n.poster-film-wrap{\r\n    min-width: 100px;\r\n    min-height: 200px;\r\n    float: none;\r\n    display: inline-block;\r\n    padding: 0;\r\n    margin-top: 30px;\r\n    vertical-align: top;\r\n}\r\n@media (min-width: 991px) {\r\n    .poster-film-wrap {\r\n        text-align: left;\r\n    }\r\n}\r\n\r\n.film-info-wrap{\r\n    min-width: 100px;\r\n    min-height: 200px;\r\n    float: none;\r\n    display: inline-block;\r\n    vertical-align: top;\r\n    margin-top: 30px;\r\n    text-align: center;\r\n}\r\n\r\n@media (min-width: 991px) {\r\n    .film-info-wrap {\r\n        text-align: left;\r\n    }\r\n}\r\n\r\n.film-title{\r\n    color: white;\r\n    font-size: 36px;\r\n    font-weight: 900;\r\n    line-height: 40px;\r\n    display: inline-block;\r\n}\r\n\r\n.film-year{\r\n    color:rgba(255, 255, 255, 0.8);\r\n    font-size: 24px;\r\n    font-weight: 500;\r\n}\r\n\r\n.users-rating{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    margin-top: 20px;\r\n}\r\n\r\n@media (max-width: 991px) {\r\n    .users-rating {\r\n        -webkit-box-pack: center;\r\n            -ms-flex-pack: center;\r\n                justify-content: center;\r\n    }\r\n}\r\n\r\napp-rating{\r\n    height: 62px;\r\n}\r\n\r\n.film-star-wrap{\r\n    display: inline-block;\r\n    border: 2px solid white;\r\n    border-radius: 50%;\r\n    width: 50px;\r\n    height: 50px;\r\n    cursor:pointer;\r\n    margin-left: 20px;\r\n}\r\n\r\n.film-star-wrap:hover{\r\n    background: #1E272C;\r\n    border-color: rgba(30,49,24,0.6);\r\n}\r\n\r\n.film-star{\r\n    width: 100%;\r\n    height: 100%;\r\n    background: url(" + __webpack_require__("../../../../../src/assets/img/starwhite.png") + ") no-repeat;\r\n    background-size: 40%;\r\n    background-position: 50% 50%;\r\n}\r\n\r\n.film-star-added{\r\n    background-image: url(" + __webpack_require__("../../../../../src/assets/img/staryellow.png") + ");\r\n}\r\n\r\n.film-overview-title{\r\n    color: white;\r\n    font-size: 20px;\r\n    font-weight: 700;\r\n}\r\n.film-overview{\r\n    color: white;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    margin-bottom: 30px;\r\n}\r\n.film-main-rols{\r\n    font-size: 22px;\r\n    font-weight: 600;\r\n    text-align: center;\r\n    margin: 0 0 30px 0;\r\n    color: rgba(0,0,0, 0.8);\r\n}\r\n\r\n@media (min-width: 991px) {\r\n    .film-main-rols {\r\n        text-align: left;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, ".film-background{\r\n    min-height: 650px;\r\n    background-size: cover;\r\n    padding: 0;\r\n    margin-bottom: 40px;\r\n}\r\n\r\n.wrap-blue{\r\n    background: rgba(0, 13, 0, 0.8);\r\n    min-height: 650px;\r\n    width: 100%;\r\n    text-align: center;\r\n}\r\n\r\n.spacer{\r\n    height: 70px;\r\n}\r\n\r\n.poster-film-wrap{\r\n    min-width: 100px;\r\n    min-height: 200px;\r\n    float: none;\r\n    display: inline-block;\r\n    padding: 0;\r\n    margin-top: 30px;\r\n    vertical-align: top;\r\n}\r\n@media (min-width: 991px) {\r\n    .poster-film-wrap {\r\n        text-align: left;\r\n    }\r\n}\r\n\r\n.film-info-wrap{\r\n    min-width: 100px;\r\n    min-height: 200px;\r\n    float: none;\r\n    display: inline-block;\r\n    vertical-align: top;\r\n    margin-top: 30px;\r\n    text-align: center;\r\n}\r\n\r\n@media (min-width: 991px) {\r\n    .film-info-wrap {\r\n        text-align: left;\r\n    }\r\n}\r\n\r\n.film-title{\r\n    color: white;\r\n    font-size: 36px;\r\n    font-weight: 900;\r\n    line-height: 40px;\r\n    display: inline-block;\r\n}\r\n\r\n.film-year{\r\n    color:rgba(255, 255, 255, 0.8);\r\n    font-size: 24px;\r\n    font-weight: 500;\r\n}\r\n\r\n.users-rating{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -webkit-box-pack: start;\r\n        -ms-flex-pack: start;\r\n            justify-content: flex-start;\r\n    -webkit-box-align: center;\r\n        -ms-flex-align: center;\r\n            align-items: center;\r\n    margin-top: 20px;\r\n}\r\n\r\n@media (max-width: 991px) {\r\n    .users-rating {\r\n        -webkit-box-pack: center;\r\n            -ms-flex-pack: center;\r\n                justify-content: center;\r\n    }\r\n}\r\n\r\nng-rating{\r\n    height: 62px;\r\n}\r\n\r\n.film-star-wrap{\r\n    display: inline-block;\r\n    border: 2px solid white;\r\n    border-radius: 50%;\r\n    width: 50px;\r\n    height: 50px;\r\n    cursor:pointer;\r\n    margin-left: 20px;\r\n}\r\n\r\n.film-star-wrap:hover{\r\n    background: #1E272C;\r\n    border-color: rgba(30,49,24,0.6);\r\n}\r\n\r\n.film-star{\r\n    width: 100%;\r\n    height: 100%;\r\n    background: url('data:image/png;base64,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') no-repeat;\r\n    background-size: 40%;\r\n    background-position: 50% 50%;\r\n}\r\n\r\n.film-star-added{\r\n    background-image: url('data:image/png;base64,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');\r\n}\r\n\r\n.film-overview-title{\r\n    color: white;\r\n    font-size: 20px;\r\n    font-weight: 700;\r\n}\r\n.film-overview{\r\n    color: white;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    margin-bottom: 30px;\r\n}\r\n.film-main-rols{\r\n    font-size: 22px;\r\n    font-weight: 600;\r\n    text-align: center;\r\n    margin: 0 0 30px 0;\r\n    color: rgba(0,0,0, 0.8);\r\n}\r\n\r\n@media (min-width: 991px) {\r\n    .film-main-rols {\r\n        text-align: left;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -470,7 +471,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/dashboard/film/film.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"wrap\" #wrap>\r\n    <div class=\"col-lg-12 film-background\"\r\n        [ngStyle]=\"{'background-image': 'url(https://image.tmdb.org/t/p/w1280/'+ filmItem.backdrop_path + ')'}\">\r\n\r\n        <div class=\"wrap-blue\">\r\n            <div class=\"container\">\r\n                <div class=\"spacer\"></div>\r\n                <div class=\"poster-film-wrap  col-md-4 col-xs-12\">\r\n                    <img width=\"300\"\r\n                    [src]=\"filmItem.poster_path ? 'https://image.tmdb.org/t/p/w500/' + filmItem.poster_path : '../assets/img/no-image.jpg'\"/>\r\n                </div\r\n                ><div class=\"film-info-wrap col-md-8 col-xs-12\">\r\n                    <div class=\"wrap-film-title\">\r\n                        <h1 class=\"film-title\">\r\n                            {{filmItem.title}} <span class=\"film-year\">({{filmItem.year}})</span>\r\n                        </h1>\r\n                        <div></div>\r\n                        <div class=\"users-rating\">\r\n                            <app-rating [rating] = 'filmItem.vote_average'></app-rating>\r\n                            <div class=\"film-star-wrap\" (click) = 'changeFilmStatus()'>\r\n                                <div class=\"film-star\" [ngClass]=\"{'film-star-added': filmAddedStatus}\"></div>\r\n                            </div>\r\n                        </div>\r\n                        <h3 class=\"film-overview-title\">Обзор</h3>\r\n                        <div class=\"film-overview text-left\">{{filmItem.overview}}</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"container\">\r\n        <h3 class=\"film-main-rols\">В главных ролях </h3>\r\n        <app-actors [id] = 'id'></app-actors>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div id=\"wrap\" #wrap>\r\n    <div class=\"col-lg-12 film-background\"\r\n        [ngStyle]=\"{'background-image': 'url(https://image.tmdb.org/t/p/w1280/'+ filmItem.backdrop_path + ')'}\">\r\n\r\n        <div class=\"wrap-blue\">\r\n            <div class=\"container\">\r\n                <div class=\"spacer\"></div>\r\n                <div class=\"poster-film-wrap  col-md-4 col-xs-12\">\r\n                    <img width=\"300\"\r\n                    [src]=\"filmItem.poster_path ? 'https://image.tmdb.org/t/p/w500/' + filmItem.poster_path : '../assets/img/no-image.jpg'\"/>\r\n                </div\r\n                ><div class=\"film-info-wrap col-md-8 col-xs-12\">\r\n                    <div class=\"wrap-film-title\">\r\n                        <h1 class=\"film-title\">\r\n                            {{filmItem.title}} <span class=\"film-year\">({{filmItem.year}})</span>\r\n                        </h1>\r\n                        <div></div>\r\n                        <div class=\"users-rating\">\r\n                            <ng-rating [rating] = 'filmItem.vote_average'></ng-rating>\r\n                            <div class=\"film-star-wrap\" (click) = 'changeFilmStatus()'>\r\n                                <div class=\"film-star\" [ngClass]=\"{'film-star-added': filmAddedStatus}\"></div>\r\n                            </div>\r\n                        </div>\r\n                        <h3 class=\"film-overview-title\">Обзор</h3>\r\n                        <div class=\"film-overview text-left\">{{filmItem.overview}}</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"container\">\r\n        <h3 class=\"film-main-rols\">В главных ролях </h3>\r\n        <ng-actors [id] = 'id'></ng-actors>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -479,8 +480,8 @@ module.exports = "<div id=\"wrap\" #wrap>\r\n    <div class=\"col-lg-12 film-bac
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilmComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_models_film_model__ = __webpack_require__("../../../../../src/app/shared/models/film-model.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -549,23 +550,24 @@ var FilmComponent = (function () {
             _this.filmAddedStatus = true;
         });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('wrap'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], FilmComponent.prototype, "wrapDiv", void 0);
+    FilmComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-film',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/film/film.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/film/film.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */]])
+    ], FilmComponent);
     return FilmComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('wrap'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object)
-], FilmComponent.prototype, "wrapDiv", void 0);
-FilmComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-film',
-        template: __webpack_require__("../../../../../src/app/dashboard/film/film.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/dashboard/film/film.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */]) === "function" && _c || Object])
-], FilmComponent);
 
-var _a, _b, _c;
-//# sourceMappingURL=film.component.js.map
+
 
 /***/ }),
 
@@ -599,8 +601,8 @@ module.exports = "<div class=\"progress blue\">\r\n  <span class=\"progress-left
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RatingComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -625,7 +627,9 @@ var RatingComponent = (function () {
     }
     RatingComponent.prototype.ngOnChanges = function (changes) {
         for (var key in changes) {
-            this.rating = changes[key].currentValue;
+            if (changes.hasOwnProperty(key)) {
+                this.rating = changes[key].currentValue;
+            }
         }
         this.makeLoader();
     };
@@ -664,23 +668,25 @@ var RatingComponent = (function () {
             }
         }, 30);
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], RatingComponent.prototype, "rating", void 0);
+    RatingComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-rating',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/film/rating/rating.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/film/rating/rating.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */]])
+    ], RatingComponent);
     return RatingComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-    __metadata("design:type", Object)
-], RatingComponent.prototype, "rating", void 0);
-RatingComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-rating',
-        template: __webpack_require__("../../../../../src/app/dashboard/film/rating/rating.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/dashboard/film/rating/rating.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */]) === "function" && _c || Object])
-], RatingComponent);
 
-var _a, _b, _c;
-//# sourceMappingURL=rating.component.js.map
+
 
 /***/ }),
 
@@ -714,7 +720,7 @@ module.exports = "<div class=\"main-content\">\r\n    <div class=\"container-flu
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -760,19 +766,19 @@ var HomeComponent = (function () {
         this.pageList++;
         this.getFilms();
     };
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-home',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/home/home.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/home/home.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */]])
+    ], HomeComponent);
     return HomeComponent;
 }());
-HomeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-home',
-        template: __webpack_require__("../../../../../src/app/dashboard/home/home.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/dashboard/home/home.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_film_service__["a" /* FilmService */]) === "function" && _a || Object])
-], HomeComponent);
 
-var _a;
-//# sourceMappingURL=home.component.js.map
+
 
 /***/ }),
 
@@ -806,8 +812,8 @@ module.exports = "<div class=\"main-content\">\r\n    <div class=\"container-flu
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -877,19 +883,20 @@ var SearchComponent = (function () {
     SearchComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
+    SearchComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ng-search',
+            moduleId: module.i,
+            template: __webpack_require__("../../../../../src/app/dashboard/search/search.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/search/search.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]])
+    ], SearchComponent);
     return SearchComponent;
 }());
-SearchComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-search',
-        template: __webpack_require__("../../../../../src/app/dashboard/search/search.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/dashboard/search/search.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object])
-], SearchComponent);
 
-var _a, _b;
-//# sourceMappingURL=search.component.js.map
+
 
 /***/ }),
 
@@ -898,14 +905,12 @@ var _a, _b;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilmService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/catch.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -915,6 +920,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -934,15 +940,16 @@ var FilmService = (function () {
         this.searchUrlSecondPart = '&page=';
     }
     FilmService.prototype.extractListData = function (res) {
-        var body = res.json();
+        var body = res;
         return body.results || {};
     };
     FilmService.prototype.extracData = function (res) {
-        var body = res.json();
+        var body = res;
         return body || {};
     };
     FilmService.prototype.extractActorsData = function (res) {
-        var body = res.json();
+        console.log(res, 'response ');
+        var body = res;
         return body.cast || {};
     };
     FilmService.prototype.getFilms = function (filmCategory, page) {
@@ -985,7 +992,7 @@ var FilmService = (function () {
     };
     FilmService.prototype.handleError = function (error) {
         var errMsg;
-        if (error instanceof __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Response */]) {
+        if (error instanceof __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Response */]) {
             var body = error.json() || '';
             var err = body.error || JSON.stringify(body);
             errMsg = error.status + " - " + (error.statusText || '') + " " + err;
@@ -994,17 +1001,16 @@ var FilmService = (function () {
             errMsg = error.message ? error.message : error.toString();
         }
         console.error(errMsg);
-        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(errMsg);
+        return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["a" /* Observable */].throw(errMsg);
     };
+    FilmService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], FilmService);
     return FilmService;
 }());
-FilmService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
-], FilmService);
 
-var _a;
-//# sourceMappingURL=film.service.js.map
+
 
 /***/ }),
 
@@ -1020,7 +1026,7 @@ module.exports = "<footer>\r\n    <div class=\"container-fluid\">\r\n        <na
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1032,16 +1038,17 @@ var FooterComponent = (function () {
     function FooterComponent() {
         this.test = new Date();
     }
+    FooterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            moduleId: module.i,
+            selector: 'ng-footer',
+            template: __webpack_require__("../../../../../src/app/shared/footer/footer.component.html")
+        })
+    ], FooterComponent);
     return FooterComponent;
 }());
-FooterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-footer',
-        template: __webpack_require__("../../../../../src/app/shared/footer/footer.component.html")
-    })
-], FooterComponent);
 
-//# sourceMappingURL=footer.component.js.map
+
 
 /***/ }),
 
@@ -1050,9 +1057,9 @@ FooterComponent = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__footer_component__ = __webpack_require__("../../../../../src/app/shared/footer/footer.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1067,17 +1074,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var FooterModule = (function () {
     function FooterModule() {
     }
+    FooterModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__footer_component__["a" /* FooterComponent */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_3__footer_component__["a" /* FooterComponent */]]
+        })
+    ], FooterModule);
     return FooterModule;
 }());
-FooterModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */]],
-        declarations: [__WEBPACK_IMPORTED_MODULE_3__footer_component__["a" /* FooterComponent */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_3__footer_component__["a" /* FooterComponent */]]
-    })
-], FooterModule);
 
-//# sourceMappingURL=footer.module.js.map
+
 
 /***/ }),
 
@@ -1086,8 +1093,8 @@ FooterModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilmResolver; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_film_service__ = __webpack_require__("../../../../../src/app/services/film.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1109,15 +1116,14 @@ var FilmResolver = (function () {
     FilmResolver.prototype.resolve = function (route) {
         return this.filmService.getFilmById(route.params.id);
     };
+    FilmResolver = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+    ], FilmResolver);
     return FilmResolver;
 }());
-FilmResolver = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_film_service__["a" /* FilmService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
-], FilmResolver);
 
-var _a, _b;
-//# sourceMappingURL=films-resolve-service.js.map
+
 
 /***/ }),
 
@@ -1132,7 +1138,7 @@ var Film = (function () {
     return Film;
 }());
 
-//# sourceMappingURL=film-model.js.map
+
 
 /***/ }),
 
@@ -1145,7 +1151,7 @@ var ROUTES = [
     { path: 'home', title: 'Популярные Фильмы', icon: 'grade', class: '' },
     { path: 'userfilms', title: 'Избранные фильмы', icon: 'person', class: '' },
 ];
-//# sourceMappingURL=navbar-routes.config.js.map
+
 
 /***/ }),
 
@@ -1179,10 +1185,10 @@ module.exports = "<nav class=\"navbar navbar-danger film-navigation-wrap navbar-
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__navbar_routes_config__ = __webpack_require__("../../../../../src/app/shared/navbar/navbar-routes.config.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1214,19 +1220,19 @@ var NavbarComponent = (function () {
         this.router.navigate(['/search/' + searchFilm]);
         this.searchFilm = '';
     };
+    NavbarComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            moduleId: module.i,
+            selector: 'ng-navbar',
+            template: __webpack_require__("../../../../../src/app/shared/navbar/navbar.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/shared/navbar/navbar.component.css")],
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]])
+    ], NavbarComponent);
     return NavbarComponent;
 }());
-NavbarComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-navbar',
-        template: __webpack_require__("../../../../../src/app/shared/navbar/navbar.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/shared/navbar/navbar.component.css")],
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
-], NavbarComponent);
 
-var _a, _b;
-//# sourceMappingURL=navbar.component.js.map
+
 
 /***/ }),
 
@@ -1235,11 +1241,11 @@ var _a, _b;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__navbar_component__ = __webpack_require__("../../../../../src/app/shared/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1254,31 +1260,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var NavbarModule = (function () {
     function NavbarModule() {
     }
+    NavbarModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__navbar_component__["a" /* NavbarComponent */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_3__navbar_component__["a" /* NavbarComponent */]]
+        })
+    ], NavbarModule);
     return NavbarModule;
 }());
-NavbarModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        imports: [__WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */]],
-        declarations: [__WEBPACK_IMPORTED_MODULE_3__navbar_component__["a" /* NavbarComponent */]],
-        exports: [__WEBPACK_IMPORTED_MODULE_3__navbar_component__["a" /* NavbarComponent */]]
-    })
-], NavbarModule);
 
-//# sourceMappingURL=navbar.module.js.map
 
-/***/ }),
-
-/***/ "../../../../../src/assets/img/starwhite.png":
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
-
-/***/ }),
-
-/***/ "../../../../../src/assets/img/staryellow.png":
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,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"
 
 /***/ }),
 
@@ -1291,11 +1283,10 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAe
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
-//# sourceMappingURL=environment.js.map
+
 
 /***/ }),
 
@@ -1304,8 +1295,8 @@ var environment = {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
@@ -1313,11 +1304,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
-//# sourceMappingURL=main.js.map
+
 
 /***/ }),
 

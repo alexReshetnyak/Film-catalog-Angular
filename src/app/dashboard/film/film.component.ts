@@ -15,7 +15,7 @@ export class FilmComponent implements OnInit {
     public id: string;
     public filmItem: Film = new Film;
     public filmYear: string;
-    public filmAddedStatus: boolean = false;
+    public filmAddedStatus = false;
     @ViewChild('wrap') public wrapDiv: ElementRef;
 
     constructor(
@@ -52,7 +52,7 @@ export class FilmComponent implements OnInit {
     public changeFilmStatus(): void {
         if (this.filmAddedStatus) {
             this.deleteFilm();
-        }else{
+        } else {
             this.saveFilm();
         }
     }

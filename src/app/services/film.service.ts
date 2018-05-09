@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/operator/map';
@@ -17,20 +18,21 @@ export class FilmService {
     private searchUrlFirstPart: string = `${this.apiUrl}search/movie?api_key=${this.apiKey}&language=ru&query=`;
     private searchUrlSecondPart: string = '&page=';
 
-    constructor(private http: Http) {}
+    constructor(private http: HttpClient) {}
 
-    private extractListData (res: Response): object {
-        const body = res.json();
+    private extractListData (res: any): object {
+        const body = res;
         return body.results || {};
     }
 
     private extracData(res: Response): object {
-        const body = res.json();
+        const body = res;
         return body || {};
     }
 
-    private extractActorsData(res: Response): object {
-        const body = res.json();
+    private extractActorsData(res: any): object {
+        console.log(res, 'response ');
+        const body = res;
         return body.cast || {};
     }
 

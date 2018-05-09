@@ -4,7 +4,7 @@ import {FilmService} from '../../../services/film.service';
 
 
 @Component({
-    selector: 'app-rating',
+    selector: 'ng-rating',
     moduleId: module.id,
     templateUrl: 'rating.component.html',
     styleUrls: ['rating.component.css'],
@@ -19,8 +19,10 @@ export class RatingComponent implements OnChanges {
     public colorProgress: string = '';
 
     public ngOnChanges(changes: SimpleChanges): void {
-        for (let key in changes) {
-            this.rating = changes[key].currentValue;
+        for (const key in changes) {
+            if (changes.hasOwnProperty(key)) {
+                this.rating = changes[key].currentValue;
+            }
         }
         this.makeLoader();
     }

@@ -5,7 +5,7 @@ import { FilmService } from '../../services/film.service';
 declare let $: any;
 
 @Component({
-    selector: 'app-search',
+    selector: 'ng-search',
     moduleId: module.id,
     templateUrl: 'search.component.html',
     styleUrls: ['search.component.css'],

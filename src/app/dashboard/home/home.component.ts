@@ -4,7 +4,7 @@ import {FilmService} from '../../services/film.service';
 declare let $: any;
 
 @Component({
-    selector: 'app-home',
+    selector: 'ng-home',
     moduleId: module.id,
     templateUrl: 'home.component.html',
     styleUrls: ['home.component.css'],

@@ -43,4 +43,4 @@ mongoose.connection.once('open', function() {
 });
 
 // start server
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 8080, () => console.log('server start on port 8080'));

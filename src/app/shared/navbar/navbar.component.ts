@@ -5,7 +5,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 
 @Component({
     moduleId: module.id,
-    selector: 'app-navbar',
+    selector: 'ng-navbar',
     templateUrl: 'navbar.component.html',
     styleUrls: ['navbar.component.css'],
 })

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
@@ -18,7 +18,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
     imports: [
         BrowserModule,
-        HttpModule,
+        HttpClientModule,
         DashboardModule,
         NavbarModule,
         FooterModule,

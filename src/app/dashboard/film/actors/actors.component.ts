@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {FilmService} from '../../../services/film.service';
 
 @Component({
-    selector: 'app-actors',
+    selector: 'ng-actors',
     moduleId: module.id,
     templateUrl: 'actors.component.html',
     styleUrls: ['actors.component.css'],
