@@ -7,5 +7,5 @@ import { Component, HostBinding } from '@angular/core';
 })
 
 export class FooterComponent {
-    public test: Date = new Date();
+    public currentDate: Date = new Date();
 }

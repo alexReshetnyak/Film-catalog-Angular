@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FilmService} from '../../services/film.service';
+import { FilmService } from '../../services/film.service';
 
 declare let $: any;
 
@@ -18,9 +18,11 @@ export class HomeComponent implements OnInit {
     public pageList: number;
     public hideLoader: boolean;
 
-    constructor(private filmCardService: FilmService) {
-                    window.scrollTo(0, 0);
-                }
+    constructor(
+        private filmCardService: FilmService
+    ) {
+        window.scrollTo(0, 0);
+    }
 
     public ngOnInit(): void {
         this.filmCategory = 'popularity';
@@ -40,7 +42,7 @@ export class HomeComponent implements OnInit {
                 this.filmList = [...this.filmList, ...films];
             }
         },
-        error =>  console.log(error));
+        error =>  console.error(error));
     }
 
     public getMoreFilms(): void {
