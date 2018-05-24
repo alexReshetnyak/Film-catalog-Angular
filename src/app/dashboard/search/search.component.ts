@@ -9,6 +9,7 @@ declare let $: any;
     moduleId: module.id,
     templateUrl: 'search.component.html',
     styleUrls: ['search.component.css'],
+    preserveWhitespaces: false
 })
 
 export class SearchComponent implements OnInit, OnDestroy {

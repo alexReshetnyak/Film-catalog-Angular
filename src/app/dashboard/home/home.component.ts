@@ -8,6 +8,7 @@ declare let $: any;
     moduleId: module.id,
     templateUrl: 'home.component.html',
     styleUrls: ['home.component.css'],
+    preserveWhitespaces: false
 })
 
 export class HomeComponent implements OnInit {

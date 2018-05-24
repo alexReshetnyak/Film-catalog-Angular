@@ -8,6 +8,7 @@ import { Film } from '../../shared/models/film-model';
     moduleId: module.id,
     templateUrl: 'film.component.html',
     styleUrls: ['film.component.css'],
+    preserveWhitespaces: false
 })
 
 export class FilmComponent implements OnInit {

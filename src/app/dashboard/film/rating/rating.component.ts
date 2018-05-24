@@ -8,6 +8,7 @@ import {FilmService} from '../../../services/film.service';
     moduleId: module.id,
     templateUrl: 'rating.component.html',
     styleUrls: ['rating.component.css'],
+    preserveWhitespaces: false
 })
 
 export class RatingComponent implements OnChanges {

@@ -6,6 +6,7 @@ import { FilmService } from '../../services/film.service';
     moduleId: module.id,
     templateUrl: 'favorites.component.html',
     styleUrls: ['favorites.component.css'],
+    preserveWhitespaces: false
 })
 
 export class FavoritesComponent implements OnInit {

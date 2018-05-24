@@ -71,10 +71,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
-@angular/compiler@6.0.0
-MIT
-MIT
-
 @angular/core@6.0.0
 MIT
 MIT
@@ -84,10 +80,6 @@ MIT
 MIT
 
 @angular/http@6.0.0
-MIT
-MIT
-
-@angular/platform-browser-dynamic@6.0.0
 MIT
 MIT
 

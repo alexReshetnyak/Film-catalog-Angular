@@ -6,6 +6,7 @@ import {FilmService} from '../../../services/film.service';
     moduleId: module.id,
     templateUrl: 'actors.component.html',
     styleUrls: ['actors.component.css'],
+    preserveWhitespaces: false
 })
 
 export class ActorsComponent implements OnInit {

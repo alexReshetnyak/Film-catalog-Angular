@@ -8,6 +8,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
     selector: 'app-navbar',
     templateUrl: 'navbar.component.html',
     styleUrls: ['navbar.component.css'],
+    preserveWhitespaces: false
 })
 
 export class NavbarComponent implements OnInit {

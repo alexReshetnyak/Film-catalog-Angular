@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { enableProdMode } from '@angular/core';
 
 declare let $: any;
 
