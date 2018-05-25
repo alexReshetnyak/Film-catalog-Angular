@@ -3,19 +3,21 @@ import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Response } from '@angular/http';
-import { map, catchError } from 'rxjs/operators';
+import { map, catchError, tap } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class FilmService {
-    private apiKey = '4f6a92e0a096ef372e94f1dfb9403a29';
-    private apiUrl = 'https://api.themoviedb.org/3/';
-    private filmsUrl = `${this.apiUrl}discover/movie?api_key=${this.apiKey}&language=ru`;
-    private filmUrlFirstPart = `${this.apiUrl}movie/`;
-    private filmUrlSecondPart = `?api_key=${this.apiKey}&language=ru`;
-    private actorsUrlFirstPart = `${this.apiUrl}movie/`;
-    private actorsUrlSecondPart = `/credits?api_key=${this.apiKey}`;
-    private searchUrlFirstPart = `${this.apiUrl}search/movie?api_key=${this.apiKey}&language=ru&query=`;
-    private searchUrlSecondPart = '&page=';
+    private readonly apiKey = '4f6a92e0a096ef372e94f1dfb9403a29';
+    private readonly apiUrl = 'https://api.themoviedb.org/3/';
+    private readonly filmsUrl = `${this.apiUrl}discover/movie?api_key=${this.apiKey}&language=ru`;
+    private readonly filmUrlFirstPart = `${this.apiUrl}movie/`;
+    private readonly filmUrlSecondPart = `?api_key=${this.apiKey}&language=ru`;
+    private readonly actorsUrlFirstPart = `${this.apiUrl}movie/`;
+    private readonly actorsUrlSecondPart = `/credits?api_key=${this.apiKey}`;
+    private readonly searchUrlFirstPart = `${this.apiUrl}search/movie?api_key=${this.apiKey}&language=ru&query=`;
+    private readonly searchUrlSecondPart = '&page=';
 
     constructor(private http: HttpClient) {}
 
@@ -64,7 +66,8 @@ export class FilmService {
     public getActors(filmId: string): Observable<any> {
         return this.http.get(this.actorsUrlFirstPart + filmId + this.actorsUrlSecondPart)
         .pipe(
-            map(this.extractListData),
+            tap(answer => console.log(answer, 'answer')),
+            map((answer: any) => answer.cast),
             catchError(this.handleError)
         );
     }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +14,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CustomReuseStrategy } from './reuse-strategy';
 
 @NgModule({
     imports: [
@@ -26,9 +27,17 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         RouterModule.forRoot([])
     ],
     declarations: [ AppComponent, DashboardComponent ],
-    providers: [{   provide: LocationStrategy,
-                    useClass: HashLocationStrategy},
-                    FilmService],
+    providers: [
+        {
+            provide: LocationStrategy,
+            useClass: HashLocationStrategy
+        },
+        {
+            provide: RouteReuseStrategy,
+            useClass: CustomReuseStrategy
+        }
+        // FilmService
+    ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
